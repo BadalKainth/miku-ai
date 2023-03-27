@@ -1,13 +1,13 @@
-import classes from "./App.module.css";
-import image from "./data/images/threeChat.png";
+import classes from "./Home.module.css";
+import image from "../data/images/threeChat.png";
 
-function App() {
+export default function Home() {
   return (
     <main>
       <section className={classes.homeSection}>
         <img src={image} alt="Img" className={classes.chatImg}></img>
         <div className={classes.information}>
-          <h1>Miku-AI</h1>
+          <h1 className={classes.title}>Miku-AI</h1>
           <h3>
             Use Chat-GPT on your <span>WhatsApp!</span>{" "}
           </h3>
@@ -20,12 +20,12 @@ function App() {
             human-level performance on various professional and academic
             benchmarks.
           </p>
-
-          <button className={classes.chatBtn}>TRY ON YOUR WHATSAPP</button>
+          <a href="https://wa.me/+918297556067" className={classes.chatBtn}>
+            TRY ON YOUR WHATSAPP
+          </a>
         </div>
       </section>
+      {/* <Footer /> */}
     </main>
   );
 }
-
-export default App;
